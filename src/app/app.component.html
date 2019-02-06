@@ -1,0 +1,86 @@
+<div style="text-align:center">
+  <img width="100px" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+</div>
+
+<div class="container">
+  <div class="card border-dark w-100">
+    <div class="card-header">Settings</div>
+    <div class="card-body p-2">
+      <div class="form-row">
+        <div class="form-group col-4">
+          <label for="inputTitle"><code>[title]</code></label>
+          <input type="text" class="form-control" id="inputTitle" [(ngModel)]="option.title" placeholder="Title">
+        </div>
+        <div class="form-group col-4">
+          <label for="inputCancelButtonTitle"><code>[cancelButtonTitle]</code></label>
+          <input type="text" class="form-control" id="inputCancelButtonTitle" [(ngModel)]="option.cancelButtonTitle" placeholder="Cancel Button Title">
+        </div>
+        <div class="form-group col-4">
+          <label for="inputSubmitButtonTitle"><code>[submitButtonTitle]</code></label>
+          <input type="text" class="form-control" id="inputSubmitButtonTitle" [(ngModel)]="option.submitButtonTitle" placeholder="Submit Button Title">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-4">
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="customSwitchCloseOnEscape" [(ngModel)]="option.closeOnEscape">
+            <label class="custom-control-label" for="customSwitchCloseOnEscape">Close On scape</label>
+          </div>
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="customSwitchShowOverlay" [(ngModel)]="option.showOverlay">
+            <label class="custom-control-label" for="customSwitchShowOverlay">showOverlay</label>
+          </div>
+        </div>
+        <div class="form-group col-4">
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="customSwitchShowDefaultFooter" [(ngModel)]="option.showDefaultFooter">
+            <label class="custom-control-label" for="customSwitchShowDefaultFooter">showDefaultFooter</label>
+          </div>
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="customSwitchShowDefaultHeader" [(ngModel)]="option.showDefaultHeader">
+            <label class="custom-control-label" for="customSwitchShowDefaultHeader">showDefaultHeader</label>
+          </div>
+        </div>
+        <div class="form-group col-4">
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadioPositionRight" value="right" class="custom-control-input" [(ngModel)]="option.position">
+            <label class="custom-control-label" for="customRadioPositionRight">position right</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadioPositionLeft" value="left" class="custom-control-input" [(ngModel)]="option.position">
+            <label class="custom-control-label" for="customRadioPositionLeft">position left</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer d-flex">
+      <button type="button" class="btn btn-outline-primary mx-1 flex-fill" (click)="Aside.show()">Show Aside</button>
+    </div>
+
+    <div class="card-body p-2">
+      <h5 class="card-title">Source</h5>
+      <pre><code>&lt;ng-aside #Aside [position]="'{{option.position}}'"
+          [title]="{{option.title}}"
+          [cancelButtonTitle]="'{{option.cancelButtonTitle}}'"
+          [submitButtonTitle]="'{{option.submitButtonTitle}}'"
+          [closeOnEscape]="{{option.closeOnEscape}}"
+          [showOverlay]="{{option.showOverlay}}"
+          [showDefaultFooter]="{{option.showDefaultFooter}}"
+          [showDefaultHeader]="{{option.showDefaultHeader}}"&gt;
+        &lt;p&gt;Content Body&lt;/p&gt;
+&lt;/aside&gt;
+&lt;button type="button" (click)="Aside.show()"&gt;Show Aside&lt;/button&gt;
+</code></pre>
+    </div>
+  </div>
+</div>
+<ng-aside #Aside [position]="option.position"
+          [title]="option.title"
+          [cancelButtonTitle]="option.cancelButtonTitle"
+          [submitButtonTitle]="option.submitButtonTitle"
+          [closeOnEscape]="option.closeOnEscape"
+          [showOverlay]="option.showOverlay"
+          [showDefaultFooter]="option.showDefaultFooter"
+          [showDefaultHeader]="option.showDefaultHeader">
+  <p class="lead">Content Body</p>
+</ng-aside>

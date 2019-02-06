@@ -1,0 +1,32 @@
+{
+  "$schema": "./node_modules/ng-packagr/package.schema.json",
+  "name": "@ng4746/aside",
+  "keywords": [
+    "ng2-aside",
+    "ng aside",
+    "angular 7",
+    "typescript",
+    "ng-aside",
+    "aside",
+    "Angular Aside"
+  ],
+  "author": {
+    "name": "Vadim"
+  },
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^7.1.0",
+    "@angular/core": "^7.1.0",
+    "@angular/animations": "^7.1.4"
+  },
+  "ngPackage": {
+    "dest": "../../dist/aside",
+    "lib": {
+      "entryFile": "src/public_api.ts",
+      "styleIncludePaths": ["styles"]
+    }
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}

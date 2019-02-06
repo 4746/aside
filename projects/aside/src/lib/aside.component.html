@@ -1,0 +1,24 @@
+<aside [@slideTrigger]="position" *ngIf="visibleStatus" [className]="position">
+
+  <ng-content *ngIf="!showDefaultHeader" select="header"></ng-content>
+
+  <header class="ng-aside-header" *ngIf="showDefaultHeader">
+    <div class="aside-title">{{title}}</div>
+    <div (click)="hideAside()" class="aside-button-close">&times;</div>
+  </header>
+
+  <section class="aside-container">
+    <div>
+      <ng-content></ng-content>
+    </div>
+  </section>
+
+  <ng-content *ngIf="!showDefaultFooter" select="footer"></ng-content>
+
+  <footer class="ng-aside-footer" *ngIf="showDefaultFooter">
+    <button (click)="hideAside($event)" type="button" class="btn btn-secondary btn-cancel">
+      {{cancelButtonTitle}}
+    </button>
+    <button (click)="submitAside($event)" type="button" class="btn btn-primary btn-submit">{{submitButtonTitle}}</button>
+  </footer>
+</aside>
