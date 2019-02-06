@@ -14,8 +14,8 @@ export class AppComponent {
     submitButtonTitle: 'Send',
     closeOnEscape: true,
     showOverlay: false,
-    showDefaultFooter: false,
-    showDefaultHeader: false,
+    showDefaultFooter: true,
+    showDefaultHeader: true,
   };
 
   onCancel() {

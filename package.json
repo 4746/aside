@@ -12,7 +12,7 @@
     "build-lib": "ng build aside",
     "build-package": "cd projects/aside && ng-packagr -p package.json && XCOPY src\\styles ..\\..\\dist\\aside\\styles  /s /i",
     "npm-pack": "cd dist/aside && npm pack",
-    "package": "npm run build-package && XCOPY README.md dist\\notice\\README.md* && npm run npm-pack",
+    "package": "npm run build-package && XCOPY README.md dist\\aside\\README.md* && npm run npm-pack",
     "npm-publish": "cd dist/aside && npm publish --access public"
   },
   "private": true,

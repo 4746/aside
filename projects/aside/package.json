@@ -2,7 +2,6 @@
   "$schema": "./node_modules/ng-packagr/package.schema.json",
   "name": "@ng4746/aside",
   "keywords": [
-    "ng2-aside",
     "ng aside",
     "angular 7",
     "typescript",
@@ -13,11 +12,16 @@
   "author": {
     "name": "Vadim"
   },
-  "version": "0.0.1",
+  "license": "MIT",
+  "version": "0.0.2",
   "peerDependencies": {
     "@angular/common": "^7.1.0",
     "@angular/core": "^7.1.0",
     "@angular/animations": "^7.1.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/4746/aside.git"
   },
   "ngPackage": {
     "dest": "../../dist/aside",
