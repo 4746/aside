@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build-demo": "ng build --prod=true --outputPath=demo",
+    "build-demo": "ng build --prod=true --outputPath=demo --baseHref=/aside/demo/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
